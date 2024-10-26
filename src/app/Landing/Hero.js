@@ -29,7 +29,7 @@ const Hero = () => {
               Welcome to My Web <span className='text-[#8dfdcc] font-semibold '>Journey</span>: Learning One Bug at a Time!
             </h1>
             <p className="text-base sm:text-lg lg:text-xl leading-relaxed">
-              Hey there, I'm Anca! A junior web developer on a quest to conquer the <span className='text-[#8dfdcc] text-shadow-neon font-semibold'>coding</span> world one typo at a time! If you see me wrestling with JavaScript, just know I'm probably one <span className='text-[#8dfdcc] text-shadow-neon font-semibold'>coffee</span> away from greatness!
+              Hey there, I&#39;m Anca! A junior web developer on a quest to conquer the <span className='text-[#8dfdcc] text-shadow-neon font-semibold'>coding</span> world one typo at a time! If you see me wrestling with JavaScript, just know I&#39;m probably one <span className='text-[#8dfdcc] text-shadow-neon font-semibold'>coffee</span> away from greatness!
             </p>
 
             {/* Button */}
