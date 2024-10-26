@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 import React, { useState, useEffect } from 'react';
 import heroImage from '../public/images/heroImage.jpg';
 import Image from 'next/image';
@@ -6,15 +6,8 @@ import { FaDownload } from "react-icons/fa6";
 import AnimatedLines from "../components/animation";
 
 const Hero = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <section id="hero" className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden">
       <div className="relative w-full h-screen bg-gradient-to-r from-custom_green_light to-custom_green_dark flex flex-col items-center justify-center text-white px-6 sm:px-8 lg:px-12 z-10">
         
         {/* Animation Layer */}
@@ -23,6 +16,7 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row w-full max-w-[1200px] items-center justify-between z-10 space-y-8 lg:space-y-0">
+          
           {/* Left side content */}
           <div className="text-center lg:text-left max-w-lg lg:max-w-[50%]">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 font-spaceGrotesk">
