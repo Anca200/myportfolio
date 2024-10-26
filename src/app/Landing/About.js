@@ -18,7 +18,6 @@ import microsqlIcon from "../public/images/microsql_Icon.png";
 import firebaseIcon from "../public/images/firebase_Icon.png";
 import nodeIcon from "../public/images/node_Icon.png";
 
-
 const About = () => {
   const [isMobile, setIsMobile] = useState(false);
   const controls = useAnimation();
@@ -47,7 +46,7 @@ const About = () => {
   const techStack = [
     { icon: htmlIcon, name: "HTML" },
     { icon: cssIcon, name: "CSS" },
-    { icon: jsIcon, name: "Java Script" },
+    { icon: jsIcon, name: "JavaScript" },
     { icon: tailwindIcon, name: "Tailwind" },
     { icon: reactIcon, name: "React" },
     { icon: viteIcon, name: "Vite" },
@@ -61,14 +60,15 @@ const About = () => {
   ];
 
   return (
-    <section className="relative w-full h-screen bg-gradient-to-r from-custom_green_light to-custom_green_dark  flex flex-col items-center justify-center overflow-hidden" id="about">
-           
- 
+    <section
+      className="relative w-full h-screen bg-gradient-to-r from-custom_green_light to-custom_green_dark flex flex-col items-center justify-center overflow-hidden"
+      id="about"
+    >
       {/* My Skills Title with Shake Animation */}
       <motion.div
         ref={titleRef}
         animate={controls}
-        className="w-[200px] h-[100px] bg-white/20 flex items-center justify-center text-center mb-[100px] rounded-[10px]  border-2 border-white"
+        className="w-[200px] h-[100px] bg-[#58b19a] flex items-center justify-center text-center mb-[100px] rounded-[10px] z-20 shadow-neon"
       >
         <h2 className="font-pressStart text-shadow-neon text-white text-[1.2rem]">
           My Skills
@@ -78,19 +78,19 @@ const About = () => {
       {/* Floating Row 1 */}
       <motion.div
         animate={{
-          y: [0, -10, 0, 10, 0], // Float up and down
+          y: [0, -10, 0, 10, 0], // Floating effect
         }}
         transition={{
           duration: 4,
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="flex flex-wrap gap-4 w-full max-w-[90%] justify-center mb-8"
+        className="flex flex-wrap gap-4 w-full max-w-[90%] justify-center mb-8  z-20"
       >
         {techStack.slice(0, 6).map((tech, index) => (
           <div
             key={index}
-            className="w-[100px] h-[100px] sm:w-[145px] sm:h-[145px] rounded-[10px] bg-white/10 backdrop-blur-md flex flex-col items-center justify-center p-2 sm:p-4 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer border-2 border-white"
+            className="w-[100px] h-[100px] sm:w-[145px] sm:h-[145px] rounded-[10px] bg-[#58b19a] flex flex-col items-center justify-center p-2 sm:p-4 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10"
           >
             <Image
               src={tech.icon}
@@ -99,7 +99,7 @@ const About = () => {
               height={48}
               className="sm:w-16 sm:h-16 mb-2"
             />
-            <p className="text-white font-semibold font-spaceGrotesk text-sm lg:text-[1.2rem]  text-center ">
+            <p className="text-white font-semibold font-spaceGrotesk text-sm lg:text-[1.2rem] text-center">
               {tech.name}
             </p>
           </div>
@@ -109,19 +109,19 @@ const About = () => {
       {/* Floating Row 2 */}
       <motion.div
         animate={{
-          y: [0, 10, 0, -10, 0], // Opposite float to Row 1
+          y: [0, 10, 0, -10, 0], // Opposite float effect
         }}
         transition={{
           duration: 4,
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="flex flex-wrap gap-4 w-full max-w-[90%] justify-center"
+        className="flex flex-wrap gap-4 w-full max-w-[90%] justify-center  z-20"
       >
         {techStack.slice(6).map((tech, index) => (
           <div
             key={index}
-            className="w-[100px] h-[100px] sm:w-[145px] sm:h-[145px] rounded-[10px] bg-white/10 backdrop-blur-md flex flex-col items-center justify-center p-2 sm:p-4 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer border-2 border-white"
+            className="w-[100px] h-[100px] sm:w-[145px] sm:h-[145px] rounded-[10px] bg-[#58b19a] flex flex-col items-center justify-center p-2 sm:p-4 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10"
           >
             <Image
               src={tech.icon}
