@@ -1,7 +1,7 @@
-import React from 'react';
-import heroImage from '../public/images/heroImage.jpg';  
-import heroBackground from '../public/images/heroBackground.png'; 
-import Image from 'next/image'; 
+import React, { useState } from 'react';
+import heroImage from '../public/images/heroImage.jpg';
+import heroBackground from '../public/images/heroBackground.png';
+import Image from 'next/image';
 import HeroIcon1 from "../public/images/HeroIcon1.png";
 import HeroIcon2 from "../public/images/HeroIcon2.png";
 import HeroIcon3 from "../public/images/HeroIcon3.png";
@@ -9,17 +9,17 @@ import { FaDownload } from "react-icons/fa6";
 import AnimatedLines from "../components/animation";
 
 const Hero = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      
-
-
       {/* Hero Content Layer with Gradient */}
       <div className="relative w-full h-screen bg-gradient-to-r from-custom_green_light to-custom_green_dark flex flex-col items-center justify-center text-white px-6 sm:px-8 lg:px-12 z-10">
-              {/* Animation Layer */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <AnimatedLines />
-      </div>
+        
+        {/* Animation Layer */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <AnimatedLines />
+        </div>
         
         <div className="flex flex-col lg:flex-row w-full max-w-[1200px] items-center justify-between z-10 space-y-8 lg:space-y-0">
           
@@ -40,13 +40,18 @@ const Hero = () => {
 
           {/* Right side with image and icons */}
           <div className="relative w-[150px] lg:w-[250px] flex items-center justify-center">
+            {/* Skeleton Loader */}
+            {!imageLoaded && (
+              <div className="w-full h-full bg-gray-300 animate-pulse rounded-lg"></div>
+            )}
             <Image    
               src={heroImage.src}  
               alt="Selfie Image"
-              className="w-full mask-img rounded-lg "
+              className={`${imageLoaded ? 'block' : 'hidden'} w-full mask-img rounded-lg`}
               width={150}  
               height={150}
               priority
+              onLoad={() => setImageLoaded(true)}
             />
 
             {/* Icons */}
