@@ -58,7 +58,7 @@ const About = () => {
       <motion.div
         ref={titleRef}
         animate={controls}
-        className="w-[200px] h-[100px] bg-[#58b19a] flex items-center justify-center text-center mb-[50px] rounded-[10px] z-20 shadow-neon"
+        className="w-[200px] h-[100px] bg-[#58b19a] flex items-center justify-center text-center mb-[80px] rounded-[10px] z-20 shadow-neon"
       >
         <h2 className="font-pressStart text-shadow-neon text-white text-[1.2rem]">
           My Skills
