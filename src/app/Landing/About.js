@@ -75,12 +75,12 @@ const About = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="flex flex-wrap gap-4 w-full max-w-[90%] justify-center mb-8 z-20" // Adjusted bottom margin for more space
+        className="grid grid-cols-3 gap-4 w-full max-w-[90%] justify-center mb-8 z-20" // Changed to grid layout
       >
         {techStack.slice(0, 6).map((tech, index) => (
           <div
             key={index}
-            className="w-[100px] h-[100px] rounded-[10px] bg-[#58b19a] flex flex-col items-center justify-center p-2 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10 lg:w-[145px] lg:h-[145px]" // Adjusted for mobile-first approach
+            className="w-full h-[100px] rounded-[10px] bg-[#58b19a] flex flex-col items-center justify-center p-2 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10"
           >
             <Image
               src={tech.icon}
@@ -106,12 +106,12 @@ const About = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="flex flex-wrap gap-4 w-full max-w-[90%] justify-center z-20"
+        className="grid grid-cols-3 gap-4 w-full max-w-[90%] justify-center z-20" // Changed to grid layout
       >
         {techStack.slice(6).map((tech, index) => (
           <div
             key={index}
-            className="w-[100px] h-[100px] rounded-[10px] bg-[#58b19a] flex flex-col items-center justify-center p-2 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10 lg:w-[145px] lg:h-[145px]" // Adjusted for mobile-first approach
+            className="w-full h-[100px] rounded-[10px] bg-[#58b19a] flex flex-col items-center justify-center p-2 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10"
           >
             <Image
               src={tech.icon}
