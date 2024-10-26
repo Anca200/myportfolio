@@ -1,16 +1,10 @@
-import React from 'react'
-
-
 const Projects = () => {
   return (
-   <section className='w-full h-screen bg-blue-200'>
-  <div className="relative w-full h-screen overflow-hidden">
+    <section id="projects" className="relative w-full h-screen bg-gray-200 flex items-center justify-center">
+      <h2 className="text-4xl">My Projects</h2>
+      {/* Your projects content */}
+    </section>
+  );
+};
 
-
-
-    </div>
-   </section>
-  )
-}
-
-export default Projects
+export default Projects;

@@ -18,6 +18,7 @@ import microsqlIcon from "../public/images/microsql_Icon.png";
 import firebaseIcon from "../public/images/firebase_Icon.png";
 import nodeIcon from "../public/images/node_Icon.png";
 
+
 const About = () => {
   const [isMobile, setIsMobile] = useState(false);
   const controls = useAnimation();
@@ -60,7 +61,9 @@ const About = () => {
   ];
 
   return (
-    <section className="relative w-full h-screen bg-[#11998e] flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative w-full h-screen bg-gradient-to-r from-custom_green_light to-custom_green_dark  flex flex-col items-center justify-center overflow-hidden" id="about">
+           
+ 
       {/* My Skills Title with Shake Animation */}
       <motion.div
         ref={titleRef}
