@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import heroImage from '../public/images/heroImage.jpg';
 import heroBackground from '../public/images/heroBackground.png';
