@@ -1,5 +1,5 @@
-"use client";
-import React, { useState, useEffect, useRef } from "react";
+"use client"; // Ensure this is rendered on the client side
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion, useAnimation, useInView } from "framer-motion";
 
@@ -19,19 +19,9 @@ import firebaseIcon from "../public/images/firebase_Icon.png";
 import nodeIcon from "../public/images/node_Icon.png";
 
 const About = () => {
-  const [isMobile, setIsMobile] = useState(false);
   const controls = useAnimation();
   const titleRef = useRef(null);
   const isInView = useInView(titleRef, { threshold: 0.5 });
-
-  useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    checkIsMobile();
-    window.addEventListener("resize", checkIsMobile);
-    return () => window.removeEventListener("resize", checkIsMobile);
-  }, []);
 
   useEffect(() => {
     if (isInView) {
@@ -61,14 +51,14 @@ const About = () => {
 
   return (
     <section
-      className="relative w-full h-screen bg-gradient-to-r from-custom_green_light to-custom_green_dark flex flex-col items-center justify-center overflow-hidden"
+      className="relative w-full min-h-screen bg-gradient-to-r from-custom_green_light to-custom_green_dark flex flex-col items-center justify-center overflow-hidden px-4"
       id="about"
     >
       {/* My Skills Title with Shake Animation */}
       <motion.div
         ref={titleRef}
         animate={controls}
-        className="w-[200px] h-[100px] bg-[#58b19a] flex items-center justify-center text-center mb-[100px] rounded-[10px] z-20 shadow-neon"
+        className="w-[200px] h-[100px] bg-[#58b19a] flex items-center justify-center text-center mb-[50px] rounded-[10px] z-20 shadow-neon"
       >
         <h2 className="font-pressStart text-shadow-neon text-white text-[1.2rem]">
           My Skills
@@ -85,19 +75,19 @@ const About = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="flex flex-wrap gap-4 w-full max-w-[90%] justify-center mb-8  z-20"
+        className="flex flex-wrap gap-4 w-full max-w-[90%] justify-center mb-8 z-20" // Adjusted bottom margin for more space
       >
         {techStack.slice(0, 6).map((tech, index) => (
           <div
             key={index}
-            className="w-[100px] h-[100px] sm:w-[145px] sm:h-[145px] rounded-[10px] bg-[#58b19a] flex flex-col items-center justify-center p-2 sm:p-4 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10"
+            className="w-[100px] h-[100px] rounded-[10px] bg-[#58b19a] flex flex-col items-center justify-center p-2 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10 lg:w-[145px] lg:h-[145px]" // Adjusted for mobile-first approach
           >
             <Image
               src={tech.icon}
               alt={tech.name}
               width={48}
               height={48}
-              className="sm:w-16 sm:h-16 mb-2"
+              className="mb-2"
             />
             <p className="text-white font-semibold font-spaceGrotesk text-sm lg:text-[1.2rem] text-center">
               {tech.name}
@@ -116,19 +106,19 @@ const About = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="flex flex-wrap gap-4 w-full max-w-[90%] justify-center  z-20"
+        className="flex flex-wrap gap-4 w-full max-w-[90%] justify-center z-20"
       >
         {techStack.slice(6).map((tech, index) => (
           <div
             key={index}
-            className="w-[100px] h-[100px] sm:w-[145px] sm:h-[145px] rounded-[10px] bg-[#58b19a] flex flex-col items-center justify-center p-2 sm:p-4 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10"
+            className="w-[100px] h-[100px] rounded-[10px] bg-[#58b19a] flex flex-col items-center justify-center p-2 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10 lg:w-[145px] lg:h-[145px]" // Adjusted for mobile-first approach
           >
             <Image
               src={tech.icon}
               alt={tech.name}
               width={48}
               height={48}
-              className="sm:w-16 sm:h-16 mb-2"
+              className="mb-2"
             />
             <p className="text-white font-semibold text-sm lg:text-[1.3rem] font-spaceGrotesk text-center">
               {tech.name}
