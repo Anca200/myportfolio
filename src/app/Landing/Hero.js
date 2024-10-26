@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import heroImage from '../public/images/heroImage.jpg';
 import Image from 'next/image';
 import { FaDownload } from "react-icons/fa6";
@@ -15,7 +15,7 @@ const Hero = () => {
           <AnimatedLines />
         </div>
 
-        <div className="flex flex-col lg:flex-row w-full max-w-[1200px] items-center justify-between z-10 space-y-8 lg:space-y-0">
+        <div className="flex flex-col lg:flex-row w-full max-w-[1200px] items-center justify-between z-10 space-y-8 lg:space-y-0 lg:mt-8"> {/* Add margin here */}
           
           {/* Left side content */}
           <div className="text-center lg:text-left max-w-lg lg:max-w-[50%]">
