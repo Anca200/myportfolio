@@ -2,14 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-
+/* Original glitch effect for h1 */
 .glitch-container {
-    animation: glitchEffect 0.5s ease-in-out 2 2.2s forwards; /* Starts glitch after delay */
+    animation: glitchEffect 0.5s ease-in-out 2 2.2s forwards;
   }
-
+  
   @keyframes glitchEffect {
     0%, 100% { text-shadow: none; }
     25% { text-shadow: 0 0 2px #4acfb4, 0 0 10px #4acfb4, 0 0 20px #4acfb4, 0 0 40px #4acfb4; }
     50% { text-shadow: -2px 0 blue, 2px 0 red; }
     75% { text-shadow: -1px -1px #8dfdcc, 1px 1px #8dfdcc; }
+  }
+  
+  /* Synchronized glitch effect for image */
+  .glitch-image {
+    animation: glitchImageEffect 0.5s ease-in-out 2 2.2s forwards;
+  }
+  
+  @keyframes glitchImageEffect {
+    0%, 100% {
+      transform: translate(0, 0) rotate(-3deg);
+      filter: none;
+    }
+    25% {
+      transform: translate(-2px, -2px) rotate(-3deg);
+      filter: drop-shadow(0 0 10px #4acfb4) drop-shadow(0 0 20px #4acfb4);
+    }
+    50% {
+      transform: translate(2px, 2px) rotate(-3deg);
+      filter: drop-shadow(-2px 0 blue) drop-shadow(2px 0 red);
+    }
+    75% {
+      transform: translate(-1px, 1px) rotate(-3deg);
+      filter: drop-shadow(0 0 5px #8dfdcc);
+    }
   }

@@ -60,7 +60,7 @@ const Hero = () => {
                     key={wordIndex}
                     custom={wordIndex}
                     variants={wordVariants}
-                    className={`inline-block ${word.trim() === "Journey" ? "text-[#8dfdcc]" : ""}`}
+                    className={`inline-block ${word.trim() === "Journey" ? "font-bold" : ""}`}
                   >
                     {word + (wordIndex !== text.split(" ").length - 1 ? "\u00A0" : "")}
                   </motion.span>
@@ -70,9 +70,9 @@ const Hero = () => {
             
 
             {/* Subtext and button */}
-            <div className="mt-4">
-              <p className="text-base sm:text-lg lg:text-xl leading-relaxed">
-                Hey there, I&#39;m Anca! A junior web developer on a quest to conquer the <span className="text-[#8dfdcc] text-shadow-neon font-semibold">coding</span> world one typo at a time! If you see me wrestling with JavaScript, just know I&#39;m probably one <span className="text-[#8dfdcc] font-semibold">coffee</span> away from greatness!
+            <div className="mt-4 ">
+              <p className="text-base sm:text-lg lg:text-xl">
+                Hey there, I&#39;m Anca! A junior web developer on a quest to conquer the <span className="text-[#8dfdcc] font-semibold">coding</span> world one typo at a time! If you see me wrestling with JavaScript, just know I&#39;m probably one <span className="text-[#8dfdcc] font-semibold">coffee</span> away from greatness!
               </p>
 
               {/* Button */}
@@ -88,13 +88,14 @@ const Hero = () => {
             <div className="absolute -left-[-40px] -bottom-4 w-[100%] h-[100%] bg-[#75f6be] rounded-lg transform -rotate-3 z-0"></div>
             
             {/* Image with tilt */}
-            <Image    
-              src={heroImage.src}  
-              alt="Selfie Image"
-              className="relative z-10 w-full rounded-lg transform -rotate-3 shadow-neon"
-              width={150}  
-              height={150}
-              priority
+            
+            <Image
+  src={heroImage.src}
+  alt="Selfie Image"
+  className="relative z-10 w-full rounded-lg transform -rotate-3 shadow-neon glitch-image"
+  width={150}
+  height={150}
+  priority
             />
           </div>
         </div>
