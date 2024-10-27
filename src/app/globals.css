@@ -3,3 +3,13 @@
 @tailwind utilities;
 
 
+.glitch-container {
+    animation: glitchEffect 0.5s ease-in-out 2 2.2s forwards; /* Starts glitch after delay */
+  }
+
+  @keyframes glitchEffect {
+    0%, 100% { text-shadow: none; }
+    25% { text-shadow: 0 0 2px #4acfb4, 0 0 10px #4acfb4, 0 0 20px #4acfb4, 0 0 40px #4acfb4; }
+    50% { text-shadow: -2px 0 blue, 2px 0 red; }
+    75% { text-shadow: -1px -1px #8dfdcc, 1px 1px #8dfdcc; }
+  }

@@ -44,7 +44,7 @@ const About = () => {
     { icon: gitIcon, name: "Git" },
     { icon: githubIcon, name: "GitHub" },
     { icon: mysqlIcon, name: "MySQL" },
-    { icon: microsqlIcon, name: "Microsoft SQL" },
+    { icon: microsqlIcon, name: "SQL Server" },
     { icon: firebaseIcon, name: "Firebase" },
     { icon: nodeIcon, name: "Node.js" },
   ];
@@ -87,7 +87,7 @@ const About = () => {
               alt={tech.name}
               width={48}
               height={48}
-              className="mb-2 w-[30px] lg:w-[40px] "
+              className="mb-2 w-[30px] lg:w-[50px] "
             />
             <p className="text-white font-semibold font-spaceGrotesk text-sm lg:text-[1.2rem] text-center">
               {tech.name}
@@ -118,7 +118,7 @@ const About = () => {
               alt={tech.name}
               width={48}
               height={48}
-              className="mb-2 w-[30px] lg:w-[40px]"
+              className="mb-2 w-[30px] lg:w-[50px]"
             />
             <p className="text-white font-semibold text-sm lg:text-[1.3rem] font-spaceGrotesk text-center">
               {tech.name}

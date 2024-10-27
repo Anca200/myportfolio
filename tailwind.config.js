@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
       custom_green_light: '#11998e',
-      custom_green_dark: '#2d5c3e'
+      custom_green_dark: '#2d5c3e',
       },
 
       keyframes: {
@@ -32,6 +32,7 @@ module.exports = {
       textShadow: {
         neon: '0 0 2px #4acfb4, 0 0 10px #4acfb4, 0 0 20px #4acfb4, 0 0 40px #4acfb4',
       },
+      
     },
     animation: {
       "line-move": "lineMove 8s linear infinite",
@@ -41,7 +42,9 @@ module.exports = {
         "0%": { transform: "translateY(100%)" },
         "100%": { transform: "translateY(-100%)" },
       },
+      
     },
+    
   
   },
   plugins: [  function ({ addUtilities }) {
@@ -49,6 +52,8 @@ module.exports = {
      '.text-shadow-neon': {
           'text-shadow': '0 0 2px #4acfb4, 0 0 10px #4acfb4, 0 0 20px #4acfb4, 0 0 40px #4acfb4',
       },
-    })
+      
+    }
+  )
   },],
 };

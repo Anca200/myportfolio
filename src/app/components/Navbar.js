@@ -83,9 +83,9 @@ const Navbar = () => {
 
       {/* Button */}
       <div>
-        <button className="w-[120px] bg-[#4c9173] text-gray-200 px-4 py-2 rounded-br-3xl rounded-tl-3xl transition-all duration-500 transform hover:scale-105 border-b-[3px] border-[#8dfdcc] hover:border-[#5fe4c9] hover:border-opacity-100 drop-shadow-xl hover:shadow-neon">
-          Roadmap
-        </button>
+      <button className="w-[130px]   lg:w-[140px] px-[1.5rem] lg:px-4 py-2 bg-gradient-to-r from-[#4c9173] to-[#66c2a3] text-gray-100 rounded-full rounded-br-2xl rounded-tl-2xl transition-all duration-500 transform hover:scale-105 hover:rotate-3 hover:bg-gradient-to-r hover:from-[#5fe4c9] hover:to-[#8dfdcc] border-b-4 border-[#8dfdcc] hover:border-[#37b877] hover:shadow-neon flex items-center justify-center font-semibold font-spaceGrotesk ">
+  Roadmap
+</button>
       </div>
 
       {/* Hamburger Menu Icon for mobile */}
