@@ -7,15 +7,15 @@ import AnimatedLines from "../components/animation";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen overflow-hidden" id='hero'>
-      <div className="relative w-full h-screen bg-gradient-to-r from-custom_green_light to-custom_green_dark flex flex-col items-center justify-center text-white px-6 sm:px-8 lg:px-12 z-10 pt-[80px] lg:pt-0"> {/* Add padding-top here */}
+    <section className="relative w-full min-h-screen " id='hero'>
+      <div className="relative w-full min-h-screen bg-gradient-to-r from-custom_green_light to-custom_green_dark flex flex-col items-center justify-center text-white z-10  lg:pt-0"> 
         
         {/* Animation Layer */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <AnimatedLines />
         </div>
 
-        <div className="flex flex-col lg:flex-row w-full max-w-[1200px] items-center justify-between z-10 space-y-8 lg:space-y-0">
+        <div className="flex flex-col lg:flex-row w-[90%] max-w-[1200px] items-center justify-between z-10 space-y-8 lg:space-y-0 mt-[80px] lg:mt-0">
           
           {/* Left side content */}
           <div className="text-center lg:text-left max-w-lg lg:max-w-[50%]">

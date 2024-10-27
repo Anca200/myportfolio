@@ -58,9 +58,9 @@ const About = () => {
       <motion.div
         ref={titleRef}
         animate={controls}
-        className="w-[200px] h-[100px] bg-[#58b19a] flex items-center justify-center text-center mb-[80px] rounded-[10px] z-20 shadow-neon"
+        className=" w-[150px] h-[100px] lg:w-[200px] lg:h-[100px] bg-[#58b19a] flex items-center justify-center text-center mb-[80px] mt-[50px] lg:mt-0 rounded-[10px] z-20 shadow-neon p-4 lg:p-0"
       >
-        <h2 className="font-pressStart text-shadow-neon text-white text-[1.2rem]">
+        <h2 className="font-pressStart text-shadow-neon text-white text-[1rem] lg:text-[1.2rem]">
           My Skills
         </h2>
       </motion.div>
@@ -75,19 +75,19 @@ const About = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="flex flex-wrap gap-4 w-full max-w-[90%] justify-center mb-8 z-20" // Adjusted bottom margin for more space
+        className=" grid grid-cols-3 lg:flex lg:flex-wrap gap-4 lg:w-full max-w-[90%] justify-center mb-8 z-20 items-center text-center content-center" // Adjusted bottom margin for more space
       >
         {techStack.slice(0, 6).map((tech, index) => (
           <div
             key={index}
-            className="w-[100px] h-[100px] rounded-[10px] bg-[#58b19a] lg:flex flex-col items-center justify-center p-2 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10 lg:w-[145px] lg:h-[145px]" // Adjusted for mobile-first approach
+            className="w-[80px] h-[80px] rounded-[10px] bg-[#58b19a] flex flex-col items-center justify-center p-2 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10 lg:w-[145px] lg:h-[145px]" // Adjusted for mobile-first approach
           >
             <Image
               src={tech.icon}
               alt={tech.name}
               width={48}
               height={48}
-              className="mb-2"
+              className="mb-2 w-[30px] lg:w-[40px] "
             />
             <p className="text-white font-semibold font-spaceGrotesk text-sm lg:text-[1.2rem] text-center">
               {tech.name}
@@ -106,19 +106,19 @@ const About = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="flex flex-wrap gap-4 w-full max-w-[90%] justify-center z-20"
+        className="grid grid-cols-3 lg:flex lg:flex-wrap gap-4 lg:w-full max-w-[90%] justify-center mb-8 z-20 items-center text-center content-center"
       >
         {techStack.slice(6).map((tech, index) => (
           <div
             key={index}
-            className="w-[100px] h-[100px] rounded-[10px] bg-[#58b19a] flex flex-col items-center justify-center p-2 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10 lg:w-[145px] lg:h-[145px]" // Adjusted for mobile-first approach
+            className="w-[80px] h-[80px] rounded-[10px] bg-[#58b19a] flex flex-col items-center justify-center p-2 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10 lg:w-[145px] lg:h-[145px]" 
           >
             <Image
               src={tech.icon}
               alt={tech.name}
               width={48}
               height={48}
-              className="mb-2"
+              className="mb-2 w-[30px] lg:w-[40px]"
             />
             <p className="text-white font-semibold text-sm lg:text-[1.3rem] font-spaceGrotesk text-center">
               {tech.name}
