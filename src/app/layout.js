@@ -1,7 +1,7 @@
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Hero from "./Landing/Hero";
-import About from "./Landing/About";
+import Skills from "./Landing/Skills";
 import Projects from "./Landing/Projects";
 import DotNavigation from "./components/DotNavigations";
 import AnimatedLines from "./components/animation";
@@ -17,10 +17,10 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Navbar />
-        <AnimatedLines /> {/* Place here to make it span entire layout */}
+        <AnimatedLines /> 
         <Hero />
         <DotNavigation />
-        <About />
+        <Skills />
         <Projects />
         {children}
       </body>

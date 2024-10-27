@@ -54,7 +54,7 @@ const Hero = () => {
               }}
               className="glitch-container" // Add this class to target glitch delay
             >
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 font-spaceGrotesk">
+              <h1 className="text-[1.8rem] lg:text-6xl font-bold mb-4 font-spaceGrotesk">
                 {text.split(" ").map((word, wordIndex) => (
                   <motion.span
                     key={wordIndex}
@@ -71,12 +71,12 @@ const Hero = () => {
 
             {/* Subtext and button */}
             <div className="mt-4 ">
-              <p className="text-base sm:text-lg lg:text-xl">
+              <p className="text-base text-[1rem] leading-[25px] lg:leading-[30px] lg:text-xl">
                 Hey there, I&#39;m Anca! A junior web developer on a quest to conquer the <span className="text-[#8dfdcc] font-semibold">coding</span> world one typo at a time! If you see me wrestling with JavaScript, just know I&#39;m probably one <span className="text-[#8dfdcc] font-semibold">coffee</span> away from greatness!
               </p>
 
               {/* Button */}
-              <button className="w-[200px] h-[60px] px-4 py-2 bg-gradient-to-r from-[#66c2a3] to-[#26c08c] text-gray-100 rounded-full rounded-bl-2xl rounded-tr-2xl transition-all duration-500 transform hover:scale-105 hover:rotate-3 hover:bg-gradient-to-r hover:from-[#5fe4c9] hover:to-[#8dfdcc] border-b-4 border-[#8dfdcc] hover:border-[#37b877] hover:shadow-neon flex items-center justify-center gap-2 font-semibold font-spaceGrotesk tracking-wide mt-[50px]">
+              <button className="w-[150px]  lg:w-[200px] lg:h-[60px] px-4 py-2 bg-gradient-to-r from-[#66c2a3] to-[#26c08c] text-gray-100 rounded-full rounded-bl-2xl rounded-tr-2xl transition-all duration-500 transform hover:scale-105 hover:rotate-3 hover:bg-gradient-to-r hover:from-[#5fe4c9] hover:to-[#8dfdcc] border-b-4 border-[#8dfdcc] hover:border-[#37b877] hover:shadow-neon flex items-center justify-center gap-2 font-semibold font-spaceGrotesk tracking-wide mt-[50px]">
                 <FaDownload /> Resume
               </button>
             </div>

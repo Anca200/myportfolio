@@ -18,7 +18,7 @@ import microsqlIcon from "../public/images/microsql_Icon.png";
 import firebaseIcon from "../public/images/firebase_Icon.png";
 import nodeIcon from "../public/images/node_Icon.png";
 
-const About = () => {
+const Skills = () => {
   const controls = useAnimation();
   const titleRef = useRef(null);
   const isInView = useInView(titleRef, { threshold: 0.5 });
@@ -52,13 +52,13 @@ const About = () => {
   return (
     <section
       className="relative w-full min-h-screen bg-gradient-to-r from-custom_green_light to-custom_green_dark flex flex-col items-center justify-center overflow-hidden px-4"
-      id="about"
+      id="skills"
     >
       {/* My Skills Title with Shake Animation */}
       <motion.div
         ref={titleRef}
         animate={controls}
-        className=" w-[150px] h-[100px] lg:w-[200px] lg:h-[100px] bg-[#58b19a] flex items-center justify-center text-center mb-[80px] mt-[50px] lg:mt-0 rounded-[10px] z-20 shadow-neon p-4 lg:p-0"
+        className=" w-[180px] h-[70px] lg:w-[200px] lg:h-[100px] bg-[#58b19a] flex items-center justify-center text-center mb-[80px] mt-[70px] lg:mt-0 rounded-[10px] z-20 shadow-neon p-4 lg:p-0"
       >
         <h2 className="font-pressStart text-shadow-neon text-white text-[1rem] lg:text-[1.2rem]">
           My Skills
@@ -80,7 +80,7 @@ const About = () => {
         {techStack.slice(0, 6).map((tech, index) => (
           <div
             key={index}
-            className="w-[80px] h-[80px] rounded-[10px] bg-[#58b19a] flex flex-col items-center justify-center p-2 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10 lg:w-[145px] lg:h-[145px]" // Adjusted for mobile-first approach
+            className="w-[80px] h-[80px] rounded-[30px] bg-[#58b19a] flex flex-col items-center justify-center p-2 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10 lg:w-[145px] lg:h-[145px]" // Adjusted for mobile-first approach
           >
             <Image
               src={tech.icon}
@@ -111,7 +111,7 @@ const About = () => {
         {techStack.slice(6).map((tech, index) => (
           <div
             key={index}
-            className="w-[80px] h-[80px] rounded-[10px] bg-[#58b19a] flex flex-col items-center justify-center p-2 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10 lg:w-[145px] lg:h-[145px]" 
+            className="w-[80px] h-[80px] rounded-[30px] bg-[#58b19a] flex flex-col items-center justify-center p-2 transition-all duration-500 transform hover:scale-105 hover:shadow-neon cursor-pointer shadow-lg z-10 lg:w-[145px] lg:h-[145px]" 
           >
             <Image
               src={tech.icon}
@@ -130,4 +130,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Skills;
