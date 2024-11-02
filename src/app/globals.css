@@ -37,3 +37,36 @@
       filter: drop-shadow(0 0 5px #8dfdcc);
     }
   }
+
+  @layer utilities {
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+  
+    .backface-hidden {
+      backface-visibility: hidden;
+    }
+  }
+  
+/* Flip Card Styles */
+.project-card {
+  @apply w-[500px] h-[300px] perspective-1000; /* Apply custom perspective class */
+}
+
+.project-card-inner {
+  @apply relative w-full h-full transition-transform duration-500 ease-in-out;
+  transform-style: preserve-3d; /* Enable 3D transformations */
+}
+
+.project-card:hover .project-card-inner {
+  transform: rotateY(180deg); /* Rotate to show back side */
+}
+
+.project-card-front,
+.project-card-back {
+  @apply absolute w-full h-full backface-hidden rounded-[10px]; /* Hide back face when flipped */
+}
+
+.project-card-back {
+  transform: rotateY(180deg); /* Rotate back side to align with flip */
+}

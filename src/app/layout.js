@@ -6,7 +6,9 @@ import Projects from "./Landing/Projects";
 import DotNavigation from "./components/DotNavigations";
 import AnimatedLines from "./components/animation";
 
-export default function RootLayout({ children }) {
+
+
+export default function RootLayout({ children}) {
   return (
     <html lang="en">
       <head>
@@ -16,13 +18,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <Navbar />
-        <AnimatedLines /> 
-        <Hero />
-        <DotNavigation />
-        <Skills />
-        <Projects />
-        {children}
+      {children}
       </body>
     </html>
   );

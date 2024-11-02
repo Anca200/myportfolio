@@ -34,6 +34,10 @@ module.exports = {
       },
       
     },
+    //Card Flip
+    rotate: {
+      'y-180': 'rotateY(180deg)',
+    },
     animation: {
       "line-move": "lineMove 8s linear infinite",
     },

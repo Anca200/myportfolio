@@ -1,9 +1,22 @@
-import Image from "next/image";
+import React from 'react'
+import Navbar from "./components/Navbar";
+import Hero from "./Landing/Hero";
+import Skills from "./Landing/Skills";
+import Projects from "./Landing/Projects";
+import DotNavigation from "./components/DotNavigations";
+import AnimatedLines from "./components/animation";
 
-export default function Home() {
+const page = () => {
   return (
-  <div>
-    
-  </div>
-  );
+    <>
+         <Navbar />
+        <AnimatedLines /> 
+        <Hero />
+        <DotNavigation />
+        <Skills />
+        <Projects />
+    </>
+  )
 }
+
+export default page
