@@ -58,9 +58,9 @@ const Skills = () => {
       <motion.div
         ref={titleRef}
         animate={controls}
-        className=" w-[180px] h-[70px] lg:w-[200px] lg:h-[100px] bg-[#58b19a] flex items-center justify-center text-center mb-[80px] mt-[70px] lg:mt-0 rounded-[10px] z-20 shadow-neon p-4 lg:p-0"
+        className=" w-[180px] h-[70px] lg:w-[200px] lg:h-[100px] bg-[#58b19a]  flex items-center justify-center text-center mb-[80px] mt-[70px] lg:mt-0 rounded-[10px] z-20 shadow-neon p-4 lg:p-0"
       >
-        <h2 className="font-pressStart text-shadow-neon text-white text-[1rem] lg:text-[1.2rem]">
+        <h2 className="font-glitch   text-white text-[1rem] lg:text-[1.5rem]">
           My Skills
         </h2>
       </motion.div>
@@ -89,7 +89,7 @@ const Skills = () => {
               height={48}
               className="mb-2 w-[30px] lg:w-[50px] "
             />
-            <p className="text-white font-semibold font-spaceGrotesk text-sm lg:text-[1.2rem] text-center">
+            <p className="text-white font-semibold font-marcelus text-sm lg:text-[1.2rem] text-center">
               {tech.name}
             </p>
           </div>

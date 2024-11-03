@@ -34,13 +34,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full lg:h-[60px]  p-[1rem] top-0 left-0 z-50 flex justify-between  lg:px-4 text-white items-center text-center font-spaceGrotesk font-semibold  transition duration-300 ${
+      className={`fixed w-full lg:h-[60px]  p-[1rem] top-0 left-0 z-50 flex justify-between  lg:px-4 text-white items-center text-center font-marcelus font-semibold  transition duration-300 ${
         isScrolled ? "bg-[#11998e] shadow-lg" : "bg-transparent"
       }`}
     >
       {/* Logo */}
-      <h2 className="lg:text-[1.5rem] text-[1.2rem] font-dancing">
-        Anca <span className="text-shadow-neon text-[#8dfdcc]">P.</span>
+      <h2 className="lg:text-[1.5rem] text-[1.2rem] font-glitch font-normal">
+        Anca <span className=" text-[#8dfdcc]">P.</span>
       </h2>
 
       {/* Links for large screens */}
@@ -61,7 +61,7 @@ const Navbar = () => {
           <li>
             <a
               href="#projects" // Updated href to section IDs
-              className={`nav-link relative inline-block transition-all duration-500 hover:scale-110 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#8dfdcc] before:transition-all before:duration-500 hover:before:w-full hover:before:h-[3px] hover:before:rounded-[10px] hover:before:shadow-neon ${
+              className={`nav-link relative inline-block transition-all duration-500 hover:scale-110 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#8dfdcc] before:transition-all before:duration-500 hover:before:w-full hover:before:h-[3px] hover:before:rounded-[10px] hover:before:shadow-neon  ${
                 activeLink === "link2" ? "before:w-full" : ""
               }`}
               onClick={() => handleClick("link2")}
@@ -85,7 +85,7 @@ const Navbar = () => {
 
       {/* Button */}
       <div>
-      <button className="w-[110px]   lg:w-[140px] px-[1.5rem] lg:px-4 py-2 bg-gradient-to-r from-[#4c9173] to-[#66c2a3] text-gray-100 rounded-full rounded-br-2xl rounded-tl-2xl transition-all duration-500 transform hover:scale-105 hover:rotate-3 hover:bg-gradient-to-r hover:from-[#5fe4c9] hover:to-[#8dfdcc] border-b-4 border-[#8dfdcc] hover:border-[#37b877] hover:shadow-neon flex items-center justify-center font-semibold font-spaceGrotesk ">
+      <button className="w-[110px]   lg:w-[140px] px-[1.5rem] lg:px-4 py-2 bg-gradient-to-r from-[#4c9173] to-[#66c2a3] text-gray-100 rounded-full rounded-br-2xl rounded-tl-2xl transition-all duration-500 transform hover:scale-105 hover:rotate-3 hover:bg-gradient-to-r hover:from-[#5fe4c9] hover:to-[#8dfdcc] border-b-4 border-[#8dfdcc] hover:border-[#37b877] hover:shadow-neon flex items-center justify-center font-semibold font-marcelus ">
   Roadmap
 </button>
       </div>

@@ -21,17 +21,19 @@ module.exports = {
       animation: {
         scaleUp: 'scaleUp 0.3s ease-in-out', // Smooth transition with a short duration
       },
-
       fontFamily: {
         spaceGrotesk: ['Space Grotesk', 'sans-serif'],
-        pressStart: ['"Press Start 2P"', 'sans-serif'],
+        pressStart: ['Press Start 2P', 'sans-serif'],
+        marcelus: ["Marcellus", 'serif'],
+        glitch: ["Rubik Glitch", 'system-ui']
       },
       boxShadow: {
-        'neon': '0 0 15px #4acfb4, 0 0 30px #4acfb4, 0 0 45px #4acfb4',
+        neon: '0 0 15px #4acfb4, 0 0 30px #4acfb4, 0 0 45px #4acfb4',
       },
       textShadow: {
         neon: '0 0 2px #4acfb4, 0 0 10px #4acfb4, 0 0 20px #4acfb4, 0 0 40px #4acfb4',
       },
+  
       
     },
     //Card Flip
@@ -58,6 +60,9 @@ module.exports = {
       },
       
     }
+    
   )
-  },],
+
+  },
+   require('tailwindcss-textshadow')],
 };

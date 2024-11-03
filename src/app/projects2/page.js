@@ -8,6 +8,7 @@ import cssIcon from "../public/images/css_Icon.png";
 import jsIcon from "../public/images/javascrip_Icon.png";
 import tailwindIcon from "../public/images/tailwind_Icon.png";
 import viteIcon from "../public/images/vite_Icon.png";
+import AnimatedLines from "../components/animation";
 
 const page = () => {
   const projects = [
@@ -37,22 +38,27 @@ const page = () => {
   ];
 
   return (
-    <section className="w-full h-screen bg-gradient-to-r from-custom_green_light to-custom_green_dark flex flex-col items-center justify-center">
-      <h2 className="text-white text-center p-4 text-3xl mb-8">Original Design</h2>
+    <section className="w-full h-screen bg-gradient-to-r from-custom_green_light to-custom_green_dark flex flex-col items-center ">
+         {/* Animation Layer */}
+         <div className="absolute inset-0 z-0 pointer-events-none">
+          <AnimatedLines />
+        </div>
+      <h2 className="text-white text-center p-4 text-3xl mb-8 font-glitch title mt-[50px]">Original Design</h2>
 
       <div className="flex justify-evenly w-[90%] space-x-6">
         {projects.map((project, index) => (
-          <div key={index} className="project-card">
-            <div className="project-card-inner">
+          <div key={index} className="project-card cursor-pointer ">
+            <div className="project-card-inner hover:shadow-neon ">
+
               {/* Front Side */}
-              <div className={`project-card-front ${project.background} flex items-center justify-center rounded-[10px] overflow-hidden`}>
+              <div className={`project-card-front ${project.background} flex items-center justify-center  overflow-hidden`}>
                 {project.hasImage ? (
                   <Image
                     src={project.imageSrc}
                     alt="Project Image"
                     layout="fill" // Fill the parent div
                     objectFit="cover" // Cover to maintain aspect ratio
-                    className="rounded-[10px]" 
+                  
                   />
                 ) : (
                   <h3 className="text-xl font-semibold text-center text-white">{project.title}</h3>
@@ -60,7 +66,7 @@ const page = () => {
               </div>
 
               {/* Back Side */}
-              <div className="project-card-back bg-green-500 flex flex-col items-center justify-center rounded-[10px] text-white px-4">
+              <div className="project-card-back bg-[#1d4a4a] border-[10px] border-transparent  flex flex-col items-center justify-center  text-white px-4">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                 <p className="text-sm text-center mb-4">{project.description}</p>
                 <p className="text-sm font-semibold">Made With:</p>
