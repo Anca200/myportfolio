@@ -60,7 +60,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#projects" // Updated href to section IDs
+              href="#roadmap" // Updated href to section IDs
               className={`nav-link relative inline-block transition-all duration-500 hover:scale-110 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#8dfdcc] before:transition-all before:duration-500 hover:before:w-full hover:before:h-[3px] hover:before:rounded-[10px] hover:before:shadow-neon  ${
                 activeLink === "link2" ? "before:w-full" : ""
               }`}
@@ -85,9 +85,11 @@ const Navbar = () => {
 
       {/* Button */}
       <div>
+        <a href="#roadmap">
       <button className="w-[110px]   lg:w-[140px] px-[1.5rem] lg:px-4 py-2 bg-gradient-to-r from-[#4c9173] to-[#66c2a3] text-gray-100 rounded-full rounded-br-2xl rounded-tl-2xl transition-all duration-500 transform hover:scale-105 hover:rotate-3 hover:bg-gradient-to-r hover:from-[#5fe4c9] hover:to-[#8dfdcc] border-b-4 border-[#8dfdcc] hover:border-[#37b877] hover:shadow-neon flex items-center justify-center font-semibold font-marcelus ">
   Roadmap
 </button>
+</a>
       </div>
 
       {/* Hamburger Menu Icon for mobile */}

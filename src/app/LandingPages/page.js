@@ -77,7 +77,7 @@ const Page = () => {
               {/* Back Side */}
               <div className="project-card-back bg-emerald p-4 flex flex-col items-center justify-center rounded-[20px] text-white font-spaceGrotesk">
                 <h3 className="text-lg md:text-xl lg:text-[2rem] lg:mb-[20px]  mb-2  title font-marcelus font-bold">{project.title}</h3>
-                <p className="text-sm md:text-base text-center mb-4">{project.description}</p>
+                <p className="text-sm md:text-base text-center mb-4 lg:mb-[20px]">{project.description}</p>
                 <p className="text-xs md:text-sm font-normal title lg:text-[1.2rem] font-glitch ">Made With:</p>
                 <div className="flex space-x-4 mt-2">
                   {project.icons && project.icons.map((icon, idx) => (

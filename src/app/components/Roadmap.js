@@ -14,12 +14,12 @@ const Roadmap = () => {
 
   const projects = [
     { title: "Landing Pages", href:"/LandingPages"  },
-    { title: "Next.js Websites", href: "/projects/nextjs-website" },
-    { title: "E-commerce Platforms", href: "/projects/ecommerce-platform" },
+    { title: "Coming Soon", href: "/projects/nextjs-website" },
+    { title: "Coming Soon", href: "/projects/ecommerce-platform" },
   ];
 
   return (
-    <section className="flex flex-col items-center py-10 bg-gradient-to-r from-custom_green_light to-custom_green_dark">
+    <section className="flex flex-col items-center py-10 bg-gradient-to-r from-custom_green_light to-custom_green_dark" id="roadmap">
       <div className="relative w-full lg:w-[80%] flex flex-col items-center">
         
         {/*Middle Line*/}
@@ -28,7 +28,7 @@ const Roadmap = () => {
         {projects.map((project, index) => (
           <div key={index} className="flex flex-col lg:flex-row items-center w-full mb-12">
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mb-4 lg:mb-0 pr-0 lg:pr-8">
-              <Link href={project.href} className="text-lg lg:text-[1.8rem]  text-white text-center lg:text-right transition-all duration-500 transform hover:scale-105 hover:text-shadow-neon font-marcelus font-semibold shadow-2xl">
+              <Link href={project.href} className="text-lg lg:text-[2rem]  text-white text-center lg:text-right transition-all duration-500 transform hover:scale-105 hover:text-shadow-neon font-marcelus font-bold shadow-2xl">
                 {project.title}
               </Link>
             </div>
