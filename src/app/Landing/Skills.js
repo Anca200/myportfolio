@@ -17,6 +17,7 @@ import mysqlIcon from "../public/images/mysql_Icon.png";
 import microsqlIcon from "../public/images/microsql_Icon.png";
 import firebaseIcon from "../public/images/firebase_Icon.png";
 import nodeIcon from "../public/images/node_Icon.png";
+import gpt from "../public/images/gpt.png"
 
 const Skills = () => {
   const controls = useAnimation();
@@ -47,6 +48,7 @@ const Skills = () => {
     { icon: microsqlIcon, name: "SQL Server" },
     { icon: firebaseIcon, name: "Firebase" },
     { icon: nodeIcon, name: "Node.js" },
+    { icon: gpt, name: "ChatGPT Tamer" },
   ];
 
   return (
