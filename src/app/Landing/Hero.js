@@ -87,7 +87,6 @@ const Hero = () => {
             {/* Green shadow div */}
             <div className="absolute -left-[-40px] -bottom-4 w-[100%] h-[100%] bg-[#75f6be] rounded-lg transform -rotate-3 z-0"></div>
             
-            {/* Image with tilt */}
             
             <Image
   src={heroImage.src}

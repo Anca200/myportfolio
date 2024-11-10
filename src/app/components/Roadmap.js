@@ -1,11 +1,8 @@
-
 "use client";
-// components/Roadmap.js
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-
 
 
 const Roadmap = () => {
@@ -16,7 +13,7 @@ const Roadmap = () => {
   }, [router.pathname]);
 
   const projects = [
-    { title: "Landing Pages", href:"/projects2"  },
+    { title: "Landing Pages", href:"/LandingPages"  },
     { title: "Next.js Websites", href: "/projects/nextjs-website" },
     { title: "E-commerce Platforms", href: "/projects/ecommerce-platform" },
   ];
@@ -24,6 +21,7 @@ const Roadmap = () => {
   return (
     <section className="flex flex-col items-center py-10 bg-gradient-to-r from-custom_green_light to-custom_green_dark">
       <div className="relative w-full lg:w-[80%] flex flex-col items-center">
+        
         {/*Middle Line*/}
         <div className="absolute left-1/2 transform -translate-x-1/2 w-[2px] bg-[#8dfdcc] h-full hidden lg:block"></div>
 

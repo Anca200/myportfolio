@@ -1,6 +1,8 @@
 'use client'
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import { RiArrowLeftDoubleFill } from "react-icons/ri";
 import TimeWave from "../public/images/LandingPages/TimeWave.png";
 import FitFuel from "../public/images/LandingPages/FitFuel.png";
 import htmlIcon from "../public/images/html_Icon.png";
@@ -9,8 +11,8 @@ import jsIcon from "../public/images/javascrip_Icon.png";
 import tailwindIcon from "../public/images/tailwind_Icon.png";
 import viteIcon from "../public/images/vite_Icon.png";
 import AnimatedLines from "../components/animation";
-import { RiArrowLeftDoubleFill } from "react-icons/ri";
-import { useRouter } from 'next/navigation';
+
+
 
 const Page = () => {
   const router = useRouter();
