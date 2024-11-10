@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+html {
+  scroll-behavior: smooth;
+}
 /* Original glitch effect for h1 */
 .glitch-container {
     animation: glitchEffect 0.5s ease-in-out 2 2.2s forwards;
