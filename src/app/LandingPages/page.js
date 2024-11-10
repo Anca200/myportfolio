@@ -76,9 +76,9 @@ const Page = () => {
 
               {/* Back Side */}
               <div className="project-card-back bg-emerald p-4 flex flex-col items-center justify-center rounded-[20px] text-white font-spaceGrotesk">
-                <h3 className="text-lg md:text-xl font-semibold mb-2 font-marcelus">{project.title}</h3>
+                <h3 className="text-lg md:text-xl lg:text-[2rem] lg:mb-[20px]  mb-2  title font-marcelus font-bold">{project.title}</h3>
                 <p className="text-sm md:text-base text-center mb-4">{project.description}</p>
-                <p className="text-xs md:text-sm font-semibold">Made With:</p>
+                <p className="text-xs md:text-sm font-normal title lg:text-[1.2rem] font-glitch ">Made With:</p>
                 <div className="flex space-x-4 mt-2">
                   {project.icons && project.icons.map((icon, idx) => (
                     <Image
@@ -87,7 +87,7 @@ const Page = () => {
                       alt="Tech Icon"
                       width={24}
                       height={24}
-                      className="object-contain"
+                      className="object-contain lg:w-[30px] lg:mt-[10px]"
                     />
                   ))}
                 </div>
