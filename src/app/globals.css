@@ -51,7 +51,7 @@
   
 /* Flip Card Styles */
 .project-card {
-  @apply w-[500px] h-[300px] perspective-1000; 
+  @apply w-[350px] h-[250px] lg:w-[500px] lg:h-[300px] perspective-1000; 
 }
 
 .project-card-inner {

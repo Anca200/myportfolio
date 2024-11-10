@@ -60,13 +60,13 @@ const Page = () => {
             <div className="project-card-inner rounded-[20px] shadow-neon2 transition-transform transform hover:scale-105">
 
               {/* Front Side */}
-              <div className={`project-card-front ${project.background} flex items-center justify-center h-[200px] sm:h-[250px] md:h-[300px] lg:h-[300px] overflow-hidden rounded-[20px]`}>
+              <div className={`project-card-front ${project.background} flex items-center justify-center sm:h-[200px] md:h-[200px] lg:h-[300px] overflow-hidden rounded-[20px]`}>
                 {project.hasImage ? (
                   <Image
                     src={project.imageSrc}
                     alt="Project Image"
                     layout="fill"
-                    objectFit="cover"
+                    objectFit="object-contain"
                     className="rounded-[20px]"
                   />
                 ) : (
