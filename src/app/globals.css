@@ -51,7 +51,7 @@
   
 /* Flip Card Styles */
 .project-card {
-  @apply w-[500px] h-[300px] perspective-1000; /* Apply custom perspective class */
+  @apply w-[500px] h-[300px] perspective-1000; 
 }
 
 .project-card-inner {
@@ -78,22 +78,16 @@
 @keyframes neon {
   0%, 100% {
     text-shadow: 
-      0 0 0.8vw #1de9b6,    /* Soft light neon green */
-      0 0 2.5vw #1de9b6,    /* Soft light neon green */
-      0 0 7vw #1de9b6,      /* Light neon green */
-      0 0 7vw #1de9b6,      /* Light neon green */
-      0 0 0.3vw #00bcd4,    /* Aqua blue */
-      0.3vw 0.3vw 0.1vw #00d4ad; /* Soft aqua blue shadow */
-    color: #009688;        /* Teal text color */
+      0 0 0.2vw  #00FF99,    /* Reduced soft glow */
+      0 0 0.5vw  #00FF99,    /* Subtle glow effect */
+      0 0 1.5vw  #00FF99;    /* Aqua blue for minimal shadow */
+    color:  #003319;        /* Teal text color */
   }
   50% {
     text-shadow: 
-      0 0 0.9vw #1de9b6,    /* Slightly more intense neon green */
-      0 0 3vw #1de9b6,      /* Slightly more intense neon green */
-      0 0 8vw #1de9b6,      /* Slightly more intense neon green */
-      0 0 8vw #1de9b6,      /* Slightly more intense neon green */
-      0 0 0.4vw #00bcd4,    /* Slightly more intense aqua blue */
-      0.4vw 0.4vw 0.1vw #00bcd4; /* Slightly more intense aqua blue shadow */
-    color: #2d7c6e;        /* Brighter teal for a gentle glow */
+      0 0 0.3vw  #00FF99,    /* Slightly more glow */
+      0 0 1vw  #00FF99,      /* Subtle increase */
+      0 0 2vw  #00FF99;      /* Gentle aqua glow */
+    color:  #003319;        /* Brighter teal for a subtle shift */
   }
 }

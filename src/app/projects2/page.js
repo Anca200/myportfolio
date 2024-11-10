@@ -1,21 +1,23 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
-import TimeWave from "../public/images/LandingPages/TimeWave.png"; // Image for the second div
-import FitFuel from "../public/images/LandingPages/FitFuel.png"; // Image for the first div
-
+import TimeWave from "../public/images/LandingPages/TimeWave.png";
+import FitFuel from "../public/images/LandingPages/FitFuel.png";
 import htmlIcon from "../public/images/html_Icon.png";
 import cssIcon from "../public/images/css_Icon.png";
 import jsIcon from "../public/images/javascrip_Icon.png";
 import tailwindIcon from "../public/images/tailwind_Icon.png";
 import viteIcon from "../public/images/vite_Icon.png";
 import AnimatedLines from "../components/animation";
+import { RiArrowLeftDoubleFill } from "react-icons/ri";
+import { useRouter } from 'next/navigation';
 
-const page = () => {
+const Page = () => {
+  const router = useRouter();
   const projects = [
     {
       title: "TimeWave",
       description: "A clean and modern static landing page for a smartwatch product, built using HTML, CSS, and JavaScript. This project showcases responsive design, interactive elements, and a sleek user interface.",
-      background: "bg-blue-500",
       hasImage: true,
       icons: [htmlIcon, cssIcon, jsIcon], 
       imageSrc: TimeWave 
@@ -23,61 +25,66 @@ const page = () => {
     {
       title: "FitFuel",
       description: "A clean and modern nutrition landing page built with Vite and Tailwind CSS. Featuring a responsive design, fast performance, and intuitive UI, Fit Fuel helps users easily access personalized meal plans and nutrition advice",
-      background: "bg-purple-500",
-      hasImage: true, // Second div has an image
-      icons: [tailwindIcon, viteIcon], // Icons for the second project
-      imageSrc: FitFuel // Image source for the second project
+      hasImage: true,
+      icons: [tailwindIcon, viteIcon],
+      imageSrc: FitFuel 
     },
     {
       title: "Project 3",
       description: "An intuitive task management tool for improving productivity.",
-      background: "bg-pink-500",
       hasImage: false,
-      icons: [htmlIcon, cssIcon, jsIcon], // Icons for the third project
+      icons: [htmlIcon, cssIcon, jsIcon],
     },
   ];
 
   return (
-    <section className="w-full h-screen bg-gradient-to-r from-custom_green_light to-custom_green_dark flex flex-col items-center ">
-         {/* Animation Layer */}
-         <div className="absolute inset-0 z-0 pointer-events-none">
+    <section className="w-full h-auto bg-gradient_general flex flex-col items-center ">
+
+      {/* Home Arrow */}
+      <div className="absolute left-4 top-4 cursor-pointer" onClick={() => router.push('/')}>
+        <RiArrowLeftDoubleFill color="#00FF99" size={40} className="lg:size-[80px]" />
+      </div>
+
+          {/*Title*/}
+          <div className="absolute inset-0 z-0 pointer-events-none">
           <AnimatedLines />
         </div>
-      <h2 className="text-white text-center p-4 text-3xl mb-8 font-glitch title mt-[50px]">Original Design</h2>
+      <h2 className="text-white text-center p-4 lg:text-[2rem] mb-8 font-glitch title mt-[50px]">Original Design</h2>
 
-      <div className="flex justify-evenly w-[90%] space-x-6">
+      {/* Project Cards */}
+      <div className="flex flex-col items-center gap-[100px] w-full lg:w-[90%]">
         {projects.map((project, index) => (
-          <div key={index} className="project-card cursor-pointer ">
-            <div className="project-card-inner hover:shadow-neon ">
+          <div key={index} className="project-card cursor-pointer w-full max-w-full p-4 lg:p-0 lg:max-w-full">
+            <div className="project-card-inner rounded-[20px] shadow-neon2 transition-transform transform hover:scale-105">
 
               {/* Front Side */}
-              <div className={`project-card-front ${project.background} flex items-center justify-center  overflow-hidden`}>
+              <div className={`project-card-front ${project.background} flex items-center justify-center h-[200px] sm:h-[250px] md:h-[300px] lg:h-[300px] overflow-hidden rounded-[20px]`}>
                 {project.hasImage ? (
                   <Image
                     src={project.imageSrc}
                     alt="Project Image"
-                    layout="fill" // Fill the parent div
-                    objectFit="cover" // Cover to maintain aspect ratio
-                  
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-[20px]"
                   />
                 ) : (
-                  <h3 className="text-xl font-semibold text-center text-white">{project.title}</h3>
+                  <h3 className="text-lg md:text-xl font-semibold text-center text-white">{project.title}</h3>
                 )}
               </div>
 
               {/* Back Side */}
-              <div className="project-card-back bg-[#1d4a4a] border-[10px] border-transparent  flex flex-col items-center justify-center  text-white px-4">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-sm text-center mb-4">{project.description}</p>
-                <p className="text-sm font-semibold">Made With:</p>
+              <div className="project-card-back bg-emerald p-4 flex flex-col items-center justify-center rounded-[20px] text-white font-spaceGrotesk">
+                <h3 className="text-lg md:text-xl font-semibold mb-2 font-marcelus">{project.title}</h3>
+                <p className="text-sm md:text-base text-center mb-4">{project.description}</p>
+                <p className="text-xs md:text-sm font-semibold">Made With:</p>
                 <div className="flex space-x-4 mt-2">
                   {project.icons && project.icons.map((icon, idx) => (
                     <Image
                       key={idx}
                       src={icon}
                       alt="Tech Icon"
-                      width={32}
-                      height={32}
+                      width={24}
+                      height={24}
                       className="object-contain"
                     />
                   ))}
@@ -91,4 +98,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
