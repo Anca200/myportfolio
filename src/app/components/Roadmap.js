@@ -14,7 +14,7 @@ const Roadmap = () => {
 
   const projects = [
     { title: "Landing Pages", href: "/LandingPages", image: LandingPage },
-    { title: "Coming Soon", href: "/projects/nextjs-website" },
+    { title: "Javascript", href: "/Javascript" },
     { title: "Coming Soon", href: "/projects/ecommerce-platform" },
   ];
 
